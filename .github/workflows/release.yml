@@ -29,19 +29,19 @@ jobs:
       run: |
         mkdir spin-plugin-terminal-canary-darwin-arm64
         GOOS=darwin GOARCH=arm64 go build -o spin-plugin-terminal-canary-darwin-arm64/terminal main.go
-        cd spin-plugin-terminal-canary-darwin-arm64 && tar -czvf spin-plugin-terminal-canary-darwin-arm64.tar.gz terminal
+        cd spin-plugin-terminal-canary-darwin-arm64 && tar -czvf spin-plugin-terminal-canary-darwin-arm64.tar.gz terminal && cd -
 
         mkdir spin-plugin-terminal-canary-darwin-amd64
         GOOS=darwin GOARCH=amd64 go build -o spin-plugin-terminal-canary-darwin-amd64/terminal main.go
-        cd spin-plugin-terminal-canary-darwin-amd64 && tar -czvf spin-plugin-terminal-canary-darwin-amd64.tar.gz terminal
+        cd spin-plugin-terminal-canary-darwin-amd64 && tar -czvf spin-plugin-terminal-canary-darwin-amd64.tar.gz terminal  && cd -
 
         mkdir spin-plugin-terminal-canary-linux-arm64
         GOOS=linux GOARCH=arm64 go build -o spin-plugin-terminal-canary-linux-arm64/terminal main.go
-        cd spin-plugin-terminal-canary-linux-arm64 && tar -czvf spin-plugin-terminal-canary-linux-arm64.tar.gz terminal
+        cd spin-plugin-terminal-canary-linux-arm64 && tar -czvf spin-plugin-terminal-canary-linux-arm64.tar.gz terminal && cd -
 
         mkdir spin-plugin-terminal-canary-linux-amd64
         GOOS=linux GOARCH=amd64 go build -o spin-plugin-terminal-canary-linux-amd64/terminal main.go
-        cd spin-plugin-terminal-canary-linux-amd64 && tar -czvf spin-plugin-terminal-canary-linux-amd64.tar.gz terminal
+        cd spin-plugin-terminal-canary-linux-amd64 && tar -czvf spin-plugin-terminal-canary-linux-amd64.tar.gz terminal && cd -
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
