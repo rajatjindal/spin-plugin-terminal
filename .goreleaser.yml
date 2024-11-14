@@ -1,3 +1,4 @@
+version: 2
 git:
   ignore_tags: true
 builds:
