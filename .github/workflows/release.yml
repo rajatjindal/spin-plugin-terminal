@@ -7,7 +7,7 @@ on:
       - "*"
 
 jobs:
-  goreleaser:
+  release:
     permissions:
       # grant the github token the ability to modify release tags
       contents: write
