@@ -48,6 +48,7 @@ jobs:
     - name: Upload assets
       run: |
         gh release upload canary *.tar.gz --clobber
+        gh release delete-asset canary terminal.json -y
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
