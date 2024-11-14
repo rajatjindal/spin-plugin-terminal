@@ -47,10 +47,8 @@ jobs:
 
     - name: Upload assets
       run: |
-        gh release delete canary -y
-        sleep 10
-        gh release create canary *.tar.gz
-        sleep 120
+        gh release create canary || true 
+        gh release upload canary *.tar.gz --clobber
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
