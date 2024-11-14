@@ -28,14 +28,9 @@ jobs:
     - name: Run GoReleaser
       uses: goreleaser/goreleaser-action@v6
       with:
-        version: '~> v2'
-        args: release --skip validate --clean --snapshot
+        version: latest
+        args: release --clean ${{ github.ref == 'refs/heads/main' && '--snapshot' || '' }}
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
-    - name: Release Plugin
-      uses: rajatjindal/spin-plugin-releaser@v1
-      with:
-        github_token: ${{ github.token }}
-        upload_checksums: true
-        template_file: contrib/spin-plugin.json.tmpl
+
