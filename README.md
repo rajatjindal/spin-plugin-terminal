@@ -1,6 +1,6 @@
 ## spin terminal
 
-A spin plugin to provide a terminal (powered by containers and orchestrated by [dagger](https://dagger.io) with the toolchains required to run a project.
+A spin plugin to provide a terminal (powered by containers and orchestrated by [dagger](https://dagger.io)) with the toolchains required to run a project.
 
 ### Install:
 
