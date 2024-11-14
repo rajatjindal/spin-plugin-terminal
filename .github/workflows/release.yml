@@ -48,6 +48,7 @@ jobs:
     - name: Upload assets
       run: |
         gh release delete canary -y
+        sleep 10
         gh release create canary *.tar.gz
         sleep 10
       env:
