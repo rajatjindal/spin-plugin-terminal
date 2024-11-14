@@ -1,0 +1,30 @@
+{
+  "name": "terminal",
+  "description": "A plugin to provide terminal for the toolchain required by spin app",
+  "homepage": "https://github.com/rajatjindal/spin-plugin-terminal",
+  "version": "{{ Version }}",
+  "spinCompatibility": ">=2.3.1",
+  "license": "Apache-2.0",
+  "packages": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      {{#addURLAndSha}}https://github.com/rajatjindal/spin-plugin-terminal/releases/download/{{ TagName }}/spin-plugin-terminal-{{ Version }}-linux-amd64.tar.gz{{/addURLAndSha}}
+    },
+    {
+      "os": "linux",
+      "arch": "aarch64",
+      {{#addURLAndSha}}https://github.com/rajatjindal/spin-plugin-terminal/releases/download/{{ TagName }}/spin-plugin-terminal-{{ Version }}-linux-arm64.tar.gz{{/addURLAndSha}}
+    },
+    {
+      "os": "macos",
+      "arch": "aarch64",
+      {{#addURLAndSha}}https://github.com/rajatjindal/spin-plugin-terminal/releases/download/{{ TagName }}/spin-plugin-terminal-{{ Version }}-darwin-arm64.tar.gz{{/addURLAndSha}}
+    },
+    {
+      "os": "macos",
+      "arch": "amd64",
+      {{#addURLAndSha}}https://github.com/rajatjindal/spin-plugin-terminal/releases/download/{{ TagName }}/spin-plugin-terminal-{{ Version }}-darwin-amd64.tar.gz{{/addURLAndSha}}
+    }
+  ]
+}
