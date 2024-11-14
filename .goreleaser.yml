@@ -1,6 +1,6 @@
 version: 2
 git:
-  ignore_tags: true
+  ignore_tags: ["true"]
 builds:
 - id: spin-plugin-terminal
   main: ./
