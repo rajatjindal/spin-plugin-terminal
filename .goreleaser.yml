@@ -1,3 +1,5 @@
+git:
+  ignore_tags: true
 builds:
 - id: spin-plugin-terminal
   main: ./
