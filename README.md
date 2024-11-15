@@ -21,7 +21,7 @@ tinygo=0.34.0
 
 and then run `spin terminal`
 
-### Build inside the terminal
+### Build and export
 Create a file `.toolchains` in your Spin App directory
 
 e.g.
